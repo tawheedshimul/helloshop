@@ -54,7 +54,7 @@ const FooterWithAIChat = () => {
   return (
     <>
       {/* Footer */}
-      <footer className="bg-lime-400 mt-64 text-white p-4 flex flex-wrap justify-between items-center">
+      <footer className="bg-gray-100 mt-64 p-4 flex flex-wrap justify-between items-center">
         {/* Company Information */}
         <div className="text-left mb-2 md:mb-0">
           <h2 className="text-lg font-semibold">Company Name</h2>

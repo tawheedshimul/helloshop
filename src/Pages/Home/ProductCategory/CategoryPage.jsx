@@ -16,7 +16,7 @@ const CategoryPage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="container  mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 text-center">
         Categories
       </h2>

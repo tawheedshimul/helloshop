@@ -10,16 +10,15 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-lime-400 shadow-md fixed top-0 left-0 z-50">
-       <SearchBox/>
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between sticky top-0">
+    <div className="w-full bg-white shadow-md left-0 z-30">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between ">
         {/* Logo */}
         <div className="text-2xl font-semibold text-gray-700 cursor-pointer">
           <Link to="/">BrandName</Link>
         </div>
 
         {/* Search Bar */}
-       
+
 
         {/* Hamburger Menu Button */}
         <div className="sm:hidden">
@@ -50,9 +49,8 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <nav
-          className={`${
-            isOpen ? "block" : "hidden"
-          } absolute top-full left-0 w-full sm:static sm:flex sm:w-auto sm:ml-8 bg-white sm:bg-transparent transition-all duration-300 ease-in-out`}
+          className={`${isOpen ? "block" : "hidden"
+            } absolute top-full left-0 w-full sm:static sm:flex sm:w-auto sm:ml-8 bg-white sm:bg-transparent transition-all duration-300 ease-in-out`}
         >
           <ul className="flex flex-col sm:flex-row gap-6 sm:gap-8 text-center p-4 sm:p-0">
             <li className="relative group">
@@ -105,7 +103,7 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
-    </header>
+    </div>
   );
 };
 
