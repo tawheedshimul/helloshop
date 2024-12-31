@@ -7,10 +7,14 @@ import SearchBox from '../Pages/Shared/Navbar/SearchBox';
 const Main = () => {
     return (
         <div>
+            <div className='z-50'>
             <SearchBox />
-            <div className='sticky top-0 z-50'>
+            </div>
+            
+            <div className='sticky top-0 z-30'>
                 <Navbar />
             </div>
+            
             <br />
             <div className=''>
                 <Outlet />

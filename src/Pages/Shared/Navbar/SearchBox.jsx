@@ -61,7 +61,7 @@ const SearchBox = () => {
 
         {/* Suggestions Dropdown */}
         {showSuggestions && query && (
-          <div className="absolute w-full mt-2 bg-white border border-gray-300 rounded-xl shadow-md z-10 max-h-64 overflow-y-auto">
+          <div className="absolute w-full mt-2  bg-white border border-gray-300 rounded-xl shadow-md z-50 max-h-64 overflow-y-auto">
             <ul>
               {suggestions.map((item, index) => (
                 <li key={index} className="px-4 py-2 text-gray-700 hover:bg-blue-100 cursor-pointer">

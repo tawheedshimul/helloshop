@@ -24,7 +24,7 @@ const CategoryPage = () => {
         {categories.map((category) => (
           <div
             key={category.id}
-            className="p-6 bg-blue-50 hover:bg-blue-100 cursor-pointer rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            className="p-6 py-10 bg-green-500 hover:bg-green-600 cursor-pointer  shadow-lg transition-transform transform hover:scale-105"
             onClick={() => handleCategoryClick(category)}
           >
             <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 text-center">
