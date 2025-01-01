@@ -27,7 +27,7 @@ const HeroSection = () => {
             </div>
             <div className="absolute inset-0 overflow-hidden">
                 <img
-                    src="https://images.unsplash.com/photo-1634973357973-f2ed2657db3c?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://plus.unsplash.com/premium_photo-1672883551967-ab11316526b4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Shopping Background"
                     className="w-full h-full object-cover opacity-50"
                 />

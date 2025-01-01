@@ -6,7 +6,7 @@ import SearchBox from '../Pages/Shared/Navbar/SearchBox';
 
 const Main = () => {
     return (
-        <div>
+        <div className='bg-gray-50'>
             <div className='z-50'>
             <SearchBox />
             </div>
