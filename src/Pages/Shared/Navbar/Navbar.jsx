@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-white shadow-md left-0 z-30">
+    <div className="w-full bg-gray-100/30 backdrop-blur-lg shadow-md left-0 z-30">
       <div className="mx-auto px-6 py-4 flex items-center justify-between ">
         {/* Logo */}
         <div className="text-2xl font-semibold text-gray-700 cursor-pointer">
