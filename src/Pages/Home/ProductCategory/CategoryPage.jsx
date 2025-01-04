@@ -18,7 +18,7 @@ const CategoryPage = () => {
   return (
     <div className="  py-8 ">
       <div className="border-solid border-2 border-zinc-400">
-        <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 text-left bg-zinc-400 px-6 mx-auto py-2">
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-rose-100 text-rose-500 text-center font mono px-6 mx-auto py-4">
           Categories
         </div>
         <div className="grid mt-20 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
