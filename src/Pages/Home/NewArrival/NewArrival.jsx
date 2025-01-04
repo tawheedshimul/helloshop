@@ -66,7 +66,7 @@ const NewArrival = () => {
 
       <section
         id="Projects"
-        className="grid grid-cols-1 p-5 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 justify-items-center mt-10"
+        className="p-1 flex flex-wrap items-center justify-center gap-10 py-10"
       >
         {products.map((product) => (
           <div
