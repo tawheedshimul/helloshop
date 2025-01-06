@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SocialMedia from "../social-media-icons/SocialMedia";
 
 const SearchBox = () => {
@@ -29,10 +29,120 @@ const SearchBox = () => {
     "T-shirts",
     "Headphones",
     "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
+    "Smartphones",
+    "Laptops",
+    "Shoes",
+    "T-shirts",
+    "Headphones",
+    "Watches",
   ];
 
+  useEffect(() => {
+    // Disable body scroll when suggestions are shown
+    if (showSuggestions) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup on unmount or toggle
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showSuggestions]);
+
   return (
-    <div className=" flex items-center justify-center bg-gray-50">
+    <div className="relative flex items-center justify-center bg-gray-50">
       {/* Search Box */}
       <div className="w-full max-w-md px-4 py-2">
         <div className="bg-white bg-opacity-80 backdrop-blur-md rounded-full shadow-lg">
@@ -86,12 +196,12 @@ const SearchBox = () => {
 
         {/* Suggestions Dropdown */}
         {showSuggestions && query && (
-          <div className=" w-full bg-white rounded-xl border border-gray-200 shadow-lg z-50 max-h-48">
+          <div className="w-screen top-15 overflow-x-auto left-0 fixed mt-1 h-screen bg-white rounded-xl border border-gray-200 shadow-lg z-50">
             <ul>
               {suggestions.map((item, index) => (
                 <li
                   key={index}
-                  className=" text-gray-700 hover:bg-green-50 cursor-pointer"
+                  className="text-gray-700 hover:bg-green-50 cursor-pointer"
                 >
                   {item}
                 </li>
