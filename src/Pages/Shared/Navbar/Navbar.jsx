@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBox";
 import SocialMedia from "../social-media-icons/SocialMedia";
-import Message from "./message";
 import AddToCartButton from "./AddToCartButton";
+import Message from "./Message";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2 justify-center">
           <Message />
           <AddToCartButton />
-          
+
           <div className="sm:hidden items-center mt-2">
             <button className="focus:outline-none" onClick={toggleMenu}>
               <svg
