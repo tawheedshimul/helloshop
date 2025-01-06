@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full px-6 bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
+    <div className="w-full px-4 bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
       <div className=" mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link className="text-2xl font-semibold cursor-pointer " to="/">BrandName</Link>
@@ -59,11 +59,13 @@ const Navbar = () => {
         </div>
         {/* Search Bar */}
         <div className="hidden sm:block">{/* <SearchBar /> */}</div>
-        <div className="flex items-center space-x-2 justify-center">
+        <div className="flex items-center space-x-5 justify-center">
+          <div className="flex space-x-2">
           <Message />
           <AddToCartButton />
+          </div>
 
-          <div className="sm:hidden items-center mt-2">
+          <div className="sm:hidden items-center mt-2 mr-2">
             <button className="focus:outline-none" onClick={toggleMenu}>
               <svg
                 className="w-6 h-6"
