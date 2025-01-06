@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchBox from "./SearchBox";
+import SearchBar from "./SearchBox";
+import SocialMedia from "../social-media-icons/SocialMedia";
+import Message from "./message";
+import AddToCartButton from "./AddToCartButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,84 +13,36 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-gray-100/30 backdrop-blur-lg shadow-md left-0 z-30">
-      <div className="mx-auto px-6 py-4 flex items-center justify-between ">
+    <div className="w-full px-6 bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
+      <div className=" mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-semibold text-gray-700 cursor-pointer">
-          <Link to="/">BrandName</Link>
-        </div>
+        <Link className="text-2xl font-semibold cursor-pointer " to="/">BrandName</Link>
 
-        {/* Search Bar */}
-
-
-        {/* Hamburger Menu Button */}
-        <div className="sm:hidden">
-          <button
-            className="text-gray-700 focus:outline-none"
-            onClick={toggleMenu}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={
-                  isOpen
-                    ? "M6 18L18 6M6 6l12 12" // X icon when open
-                    : "M4 6h16M4 12h16M4 18h16" // Hamburger icon when closed
-                }
-              ></path>
-            </svg>
-          </button>
-        </div>
-
-        {/* Navigation Links */}
-        <nav
+        <div
           className={`${isOpen ? "block" : "hidden"
-            } absolute top-full left-0 w-full sm:static sm:flex sm:w-auto sm:ml-8 bg-white sm:bg-transparent transition-all duration-300 ease-in-out`}
+            } bg-white bg-opacity-80 backdrop-blur-md absolute top-full left-0 w-full sm:static sm:flex sm:w-auto sm:ml-8 sm:bg-transparent transition-all duration-300 ease-in-out`}
         >
-          <ul className="flex flex-col sm:flex-row gap-6 sm:gap-8 text-center p-4 sm:p-0">
+          <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-gray-70000 text-right p-4 sm:p-0 rounded-md sm:w-auto sm:max-w-4xl">
             <li className="relative group">
               <Link
                 to="/"
-                className="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="hover:text-green-500 transition duration-300 ease-in-out"
               >
                 Home
               </Link>
-              {/* Example of Dropdown (optional) */}
-              <div className="absolute left-0 hidden group-hover:block bg-white shadow-md mt-2 w-40">
-                <ul>
-                  <li><Link to="/submenu1" className="px-4 py-2 text-gray-700 hover:bg-gray-200">Submenu 1</Link></li>
-                  <li><Link to="/submenu2" className="px-4 py-2 text-gray-700 hover:bg-gray-200">Submenu 2</Link></li>
-                </ul>
-              </div>
             </li>
             <li>
               <Link
                 to="/shipping-agencies"
-                className="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="hover:text-green-500 transition duration-300 ease-in-out"
               >
                 Shipping Agencies
               </Link>
             </li>
             <li>
               <Link
-                to="/customer-care"
-                className="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out"
-              >
-                Customer Care
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/about"
-                className="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="hover:text-green-500 transition duration-300 ease-in-out"
               >
                 About
               </Link>
@@ -95,13 +50,49 @@ const Navbar = () => {
             <li>
               <Link
                 to="/login"
-                className="text-gray-700 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="hover:text-green-500 transition duration-300 ease-in-out"
               >
                 Login
               </Link>
             </li>
           </ul>
-        </nav>
+        </div>
+        {/* Search Bar */}
+        <div className="hidden sm:block">{/* <SearchBar /> */}</div>
+        <div className="flex items-center space-x-2 justify-center">
+          <Message />
+          <AddToCartButton />
+          
+          <div className="sm:hidden items-center mt-2">
+            <button className="focus:outline-none" onClick={toggleMenu}>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d={
+                    isOpen
+                      ? "M6 18L18 6M6 6l12 12" // X icon when open
+                      : "M4 6h16M4 12h16M4 18h16" // Hamburger icon when closed
+                  }
+                ></path>
+              </svg>
+            </button>
+          </div>
+          {/* <SocialMedia /> */}
+        </div>
+
+        {/* Hamburger Menu Button */}
+
+
+        {/* Navigation Links */}
+
       </div>
     </div>
   );
