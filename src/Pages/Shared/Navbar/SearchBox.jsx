@@ -145,14 +145,14 @@ const SearchBox = () => {
     <div className="relative flex items-center justify-center bg-gray-50">
       {/* Search Box */}
       <div className="w-full max-w-md px-4 py-2">
-        <div className="bg-white bg-opacity-80 backdrop-blur-md rounded-full shadow-lg">
+        <div className="bg-white bg-opacity-80 backdrop-blur-md rounded-full ">
           <input
             type="text"
             value={query}
             onChange={handleSearchChange}
             onKeyPress={handleKeyPress}
             placeholder="Search products..."
-            className="w-full py-1 pl-12 pr-4 text-gray-800 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 transition-all ease-in-out duration-300 shadow-sm hover:shadow-md"
+            className="w-full py-1 pl-10 pr-4 text-gray-800 rounded-full border focus:outline-none focus:ring-1 focus:ring-green-400 transition-all ease-in-out duration-300 shadow-sm hover:shadow-md"
           />
 
           {/* Search Icon */}
@@ -212,7 +212,7 @@ const SearchBox = () => {
       </div>
 
       {/* Social Media Icons */}
-      <div className="md:fixed right-4">
+      <div className="md:fixed right-0">
         <SocialMedia />
       </div>
     </div>

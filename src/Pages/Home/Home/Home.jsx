@@ -4,6 +4,7 @@ import CategoryPage from '../ProductCategory/CategoryPage';
 import ProductCartPage from '../../Shared/Cart/ProductCartPage';
 import HeroSection from '../HeroSection/HeroSection';
 import NewArrival from '../NewArrival/NewArrival';
+import NewProduct from '../NewProduct/NewProduct';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <CategoryPage />
             {/* <ProductCartPage /> */}
             <NewArrival />
+            <NewProduct />
         </div>
     );
 };

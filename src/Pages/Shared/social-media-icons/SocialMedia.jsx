@@ -12,7 +12,7 @@ const SocialMedia = () => {
   };
 
   return (
-    <div className="flex justify-center space-x-1 mr-[17px]">
+    <div className="flex justify-center space-x-1 mr-4">
       {/* Facebook Icon */}
       <a
         href={socialLinks.facebook}
