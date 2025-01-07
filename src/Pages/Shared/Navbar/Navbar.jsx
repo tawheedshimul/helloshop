@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className="w-full px-4 bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
       <div className=" mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link className="text-2xl font-semibold cursor-pointer " to="/">BrandName</Link>
+        <Link className="text-2xl font-semibold cursor-pointer " to="/">MYSHOP</Link>
 
         <div
           className={`${isOpen ? "block" : "hidden"
@@ -26,7 +26,7 @@ const Navbar = () => {
             <li className="relative group">
               <Link
                 to="/"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
+                className=" animate-button"
               >
                 Home
               </Link>
@@ -34,7 +34,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/shipping-agencies"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
+                className="animate-button"
               >
                 Shipping Agencies
               </Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/about"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
+                className="animate-button"
               >
                 About
               </Link>
@@ -50,19 +50,18 @@ const Navbar = () => {
             <li>
               <Link
                 to="/login"
-                className="hover:text-green-500 transition duration-300 ease-in-out"
+                className="animate-button"
               >
                 Login
               </Link>
             </li>
           </ul>
         </div>
-        {/* Search Bar */}
-        <div className="hidden sm:block">{/* <SearchBar /> */}</div>
+       
         <div className="flex items-center space-x-5 justify-center">
           <div className="flex space-x-2">
-          <Message />
-          <AddToCartButton />
+            <Message />
+            <AddToCartButton />
           </div>
 
           <div className="sm:hidden items-center mt-2 mr-2">

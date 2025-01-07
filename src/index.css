@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.animate-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0px;
+    font-size: 16px;
+    color: #333;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+    outline: none;
+  }
+
+  /* The pseudo-element for the bottom border */
+  .animate-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the border */
+    background: #4ade80; /* Border color */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth animation */
+  }
+
+  /* On hover, animate the border from left to right */
+  .animate-button:hover::after {
+    width: 100%; /* Expand to full width */
+    left: 0;
+  }
+
+  /* On leave, animate the border shrinking back from left to right */
+  .animate-button:not(:hover)::after {
+    width: 0;
+    left: 0;
+  }
