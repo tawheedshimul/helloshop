@@ -27,27 +27,25 @@ const ProductSearchCard = () => {
         setFilteredProducts(filtered);
     }, [searchTerm, selectedCategory]);
 
-    const toggleBodyScroll = (disable) => {
-        if (disable) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-    };
-
     useEffect(() => {
-        toggleBodyScroll(showModal);
-        return () => toggleBodyScroll(false); // Clean up on unmount
+        if (showModal) {
+            document.body.style.overflow = 'hidden'; // Disable background scrolling
+        } else {
+            document.body.style.overflow = 'auto'; // Enable background scrolling
+        }
+        return () => (document.body.style.overflow = 'auto'); // Clean up on unmount
     }, [showModal]);
 
     return (
-        <div className="">
+        <div>
             {/* Trigger to open the modal */}
             <div className="relative">
                 <input
                     type="text"
                     placeholder="Search products..."
                     onClick={() => setShowModal(true)}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
                     readOnly
                 />
@@ -56,8 +54,8 @@ const ProductSearchCard = () => {
 
             {/* Modal for Search and Filter */}
             {showModal && (
-                <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex justify-center items-center">
-                    <div className="bg-white h-screen w-full max-w-3xl p-6 rounded-lg shadow-lg overflow-y-auto">
+                <div className="fixed top-0 z-50 w-full left-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+                    <div className="bg-white h-screen w-full p-6 rounded-lg shadow-lg overflow-y-auto relative">
                         <div className="flex flex-col md:flex-row gap-4 mb-6">
                             <div className="relative flex-grow">
                                 <input
@@ -111,6 +109,7 @@ const ProductSearchCard = () => {
                         >
                             Close
                         </button>
+                        <div className="h-20"></div>
                     </div>
                 </div>
             )}
