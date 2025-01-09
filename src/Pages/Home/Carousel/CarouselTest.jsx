@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const CarouselItem = ({ item, isActive }) => (
-  <div className={`relative flex-shrink-0 w-full h-64 md:h-96 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'}`}>
+  <div className={`relative flex-shrink-0 w-full h-64 md:h-96 lg:h-screen transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 absolute top-0 left-0'}`}>
     <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded-lg" />
     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
       <h3 className="text-white text-xl font-bold">{item.name}</h3>
@@ -52,12 +52,12 @@ const CarouselTest = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
+    <div className="relative w-full lg:max-w-full max-w-4xl mx-auto lg:h-screen overflow-hidden">
       <div
         className="flex transition-transform duration-300 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}

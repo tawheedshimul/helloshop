@@ -54,10 +54,10 @@ const AIChat = () => {
 
   return (
     <>
-      <div className="fixed bottom-4 right-4">
+      <div className="fixed bottom-24 right-4">
         <button
           onClick={toggleChat}
-          className="bg-green-600 text-3xl hover:bg-green-500 text-white font-bold py-4 px-4 rounded-full z-50"
+          className="bg-green-600 text-3xl hover:bg-green-500 text-white font-bold py-3 px-3 rounded-full z-50"
         >
           <AiFillWechat />
         </button>

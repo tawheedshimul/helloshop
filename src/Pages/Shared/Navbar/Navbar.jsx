@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBox";
-import SocialMedia from "../social-media-icons/SocialMedia";
 import AddToCartButton from "./AddToCartButton";
 import Message from "./Message";
 
@@ -13,11 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full px-4 bg-opacity-50 backdrop-blur-md shadow-md left-0 z-30">
+    <div className="w-full px-4 bg-opacity-80 backdrop-blur-md shadow-md left-0 z-30">
       <div className=" mx-auto flex items-center justify-between">
-        {/* Logo */}
-        <Link className="text-2xl font-semibold cursor-pointer " to="/">MYSHOP</Link>
-
         <div
           className={`${isOpen ? "block" : "hidden"
             } bg-white bg-opacity-80 backdrop-blur-md absolute top-full left-0 w-full sm:static sm:flex sm:w-auto sm:ml-8 sm:bg-transparent transition-all duration-300 ease-in-out`}
@@ -28,7 +23,7 @@ const Navbar = () => {
                 to="/"
                 className=" animate-button"
               >
-                Home
+                MEN
               </Link>
             </li>
             <li>
@@ -36,7 +31,7 @@ const Navbar = () => {
                 to="/shipping-agencies"
                 className="animate-button"
               >
-                Shipping Agencies
+                WOMEN
               </Link>
             </li>
             <li>
@@ -44,7 +39,7 @@ const Navbar = () => {
                 to="/about"
                 className="animate-button"
               >
-                About
+                KIDS
               </Link>
             </li>
             <li>
@@ -52,7 +47,15 @@ const Navbar = () => {
                 to="/login"
                 className="animate-button"
               >
-                Login
+                ELECTRONICS
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/login"
+                className="animate-button"
+              >
+                BUILDINGS
               </Link>
             </li>
           </ul>
@@ -88,11 +91,6 @@ const Navbar = () => {
           </div>
           {/* <SocialMedia /> */}
         </div>
-
-        {/* Hamburger Menu Button */}
-
-
-        {/* Navigation Links */}
 
       </div>
     </div>
