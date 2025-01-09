@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className='z-10 mt-[-26px]'>  
             <CarouselTest />
-            <CategoryPage />
+            {/* <CategoryPage /> */}
             <NewArrival />
             <NewProduct />
         </div>
