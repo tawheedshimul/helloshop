@@ -65,11 +65,11 @@ const AIChat = () => {
 
       {/* Chat Popup */}
       {isChatOpen && (
-        <div className="fixed bottom-4 right-4 bg-white w-full max-w-sm rounded-lg shadow-lg p-4">
+        <div className="fixed bottom-4  right-0 bg-white w-full max-w-sm rounded-lg shadow-lg p-4">
           {/* Close Button */}
           <button
             onClick={toggleChat}
-            className="absolute top-4 right-4 text-white p-1 bg-rose-600 hover:text-red-500"
+            className="absolute top-4 right-4 text-white p-1 bg-green-600 hover:text-green-500"
           >
             &times;
             CLOSE CHAT
@@ -86,7 +86,7 @@ const AIChat = () => {
                   key={index}
                   className={`mb-2 p-2 rounded ${message.sender === "AI"
                       ? "bg-gray-100 text-gray-800"
-                      : "bg-blue-500 text-white self-end"
+                      : "bg-green-500 text-white self-end"
                     }`}
                 >
                   <strong>{message.sender}: </strong>
@@ -106,7 +106,7 @@ const AIChat = () => {
               />
               <button
                 type="submit"
-                className="bg-blue-500 text-white p-2 rounded-r hover:bg-blue-600"
+                className="bg-green-500 text-white p-2 rounded-r hover:bg-green-600"
               >
                 Send
               </button>
