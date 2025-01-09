@@ -60,7 +60,7 @@ const products = [
 const NewArrival = () => {
   return (
     <div className=" border-solid border-2 border-zinc-400">
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-rose-100 text-rose-500 text-center font mono px-6 mx-auto py-4">
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-green-100 text-green-500 text-center font mono px-6 mx-auto py-4">
           New Arrival Product ...
         </div>
 
