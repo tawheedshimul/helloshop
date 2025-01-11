@@ -4,6 +4,7 @@ import Footer from '../Pages/Shared/Footer/Footer';
 import Navbard from '../Pages/Shared/Navbar/Navbard';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
 import AIChat from '../Pages/Shared/Footer/AiChat';
+import TawkToChat from '../Pages/Home/Home/Tawk';
 
 const Main = () => {
     return (
@@ -20,7 +21,8 @@ const Main = () => {
             <div className=''>
                 <Outlet />
             </div>
-            <AIChat />
+            {/* <AIChat /> */}
+            <TawkToChat />
             <Footer />
         </div>
     );
