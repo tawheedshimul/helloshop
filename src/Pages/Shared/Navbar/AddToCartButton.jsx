@@ -1,6 +1,7 @@
 // AddToCartButton.jsx
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 
 const AddToCartButton = () => {
   const handleClick = () => {
@@ -11,9 +12,9 @@ const AddToCartButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="flex items-center rounded-md  hover:text-green-300 duration-200"
+      className="flex items-center rounded-md hover:text-green-300 duration-200"
     >
-      <FaShoppingCart className="text-xl" />
+      <FiShoppingCart className="text-xl" />
     </button>
   );
 };

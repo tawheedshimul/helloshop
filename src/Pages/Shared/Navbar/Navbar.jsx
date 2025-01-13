@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiHome } from "react-icons/bi";
-import { BsFillPeopleFill } from "react-icons/bs";
+import { BsFillPeopleFill, BsPeople } from "react-icons/bs";
 import ProductSearchCard from "../Search/Searchwork";
 import Message from "./Message";
 import AddToCartButton from "./AddToCartButton";
+import { LuLogIn } from "react-icons/lu";
+import { GoPeople } from "react-icons/go";
+import { MdAppRegistration } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,23 +21,26 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-2">
+    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-3 ">
       <div className="flex items-center justify-between px-4  relative">
         {/* Search Box */}
         <div className="text-2xl flex items-center">
-          <BiHome />
-          <div className="px-3">
-            <BsFillPeopleFill />
-          </div>
+
+          <Link to="/" className="">
+            <BiHome className="text-2xl hover:text-green-600 duration-200" />
+          </Link>
+          <Link to="/" className=" px-3">
+            <GoPeople className="text-2xl hover:text-green-600 duration-200" />
+          </Link>
 
         </div>
 
         {/* Dropdown Menu */}
         <div
-          className={`absolute left-0 top-16 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"
+          className={`absolute left-0 top-10 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"
             }`}
         >
-          <ul className="flex flex-col ml-4 sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right p-4 sm:p-0">
+          <ul className="flex mt-2 mr-4 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
             <li>
               <Link to="/" className="animate-button">
                 MEN
@@ -65,6 +71,7 @@ const Navbar = () => {
 
         {/* Social Media Icons or Additional Buttons */}
         <div className="flex items-center space-x-2">
+
           <div className="px-3">
             <ProductSearchCard />
           </div>
