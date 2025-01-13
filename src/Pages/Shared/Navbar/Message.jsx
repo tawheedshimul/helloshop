@@ -24,7 +24,7 @@ const Message = ({ text, sender, timestamp }) => {
                     to="/customer-care"
                     className="text-gray-700 rounded-md  p-2 hover:text-green-500 transition duration-300 ease-in-out"
                 >
-                    <FiMessageSquare className='text-xl' />
+                    <FiMessageSquare className='text-xl ' />
                 </Link>
             </div>
         </div>
