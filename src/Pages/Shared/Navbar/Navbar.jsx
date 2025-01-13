@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg">
+    <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-2">
       <div className="flex items-center justify-between px-4  relative">
         {/* Search Box */}
         <div className="text-2xl flex items-center">
