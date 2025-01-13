@@ -68,7 +68,7 @@ const Navbar = () => {
           <div className="px-3">
             <ProductSearchCard />
           </div>
-          <Message />
+          {/* <Message /> */}
           <AddToCartButton />
           <button
             className="focus:outline-none sm:hidden"

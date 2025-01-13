@@ -64,9 +64,9 @@ const ProductSearchCard = () => {
             <div className="relative">
                 <button
                     onClick={() => setShowModal(true)}
-                    className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="py-2 rounded-md focus:outline-none  hover:text-green-500"
                 >
-                    <FaSearch className="text-gray-400" />
+                    <FaSearch className="" />
                 </button>
             </div>
 
