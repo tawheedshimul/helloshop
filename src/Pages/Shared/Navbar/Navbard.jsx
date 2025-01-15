@@ -13,7 +13,7 @@ const Navbard = () => {
 
   return (
     <div className='flex justify-between px-4 items-center'>
-      <div className='text-2xl'>
+      <div className='text-2xl font-mono'>
         Brand
       </div>
       <div>
