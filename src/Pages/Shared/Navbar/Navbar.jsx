@@ -23,10 +23,10 @@ const Navbar = () => {
 
   return (
     <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-3 ">
-      <div className="flex items-center justify-between px-4  relative">
+      <div className="flex items-center justify-between px-4 text-xl relative">
         {/* Search Box */}
         <div className="hidden sm:block">
-          <div className="flex items-center justify-between space-x-3">
+          <div className="flex items-center justify-between space-x-5">
             <Link to="/" className="">
               <BiHome className="text-xl hover:text-green-600 duration-200" />
             </Link>
@@ -74,7 +74,7 @@ const Navbar = () => {
         </div>
         {/* Social Media Icons or Additional Buttons */}
         <div className="hidden sm:block">
-          <div className="flex items-center space-x-3 ">
+          <div className="flex items-center space-x-5 ">
             <div className="px-">
               <ProductSearchCard />
             </div>
