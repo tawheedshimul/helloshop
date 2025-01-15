@@ -59,26 +59,30 @@ const products = [
 
 const NewArrival = () => {
   return (
-    <div className=" border-solid border-2 border-zinc-400">
+    <div className="bg-zinc-100 py-2 border-solid border-2 border-zinc-400">
       <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 bg-green-100 text-green-500 text-center font mono px-6 mx-auto py-4">
-          New Arrival Product ...
-        </div>
+        New Arrival Product ...
+      </div>
 
       <section
         id="Projects"
-        className="p-1 flex flex-wrap items-center justify-center gap-10 py-10"
+        className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2"
       >
         {products.map((product) => (
           <div
             key={product.id}
-            className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
+            className="bg-white border border-gray-200 rounded-sm shadow-sm"
           >
             <a href="#">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="h-80 w-72 object-cover rounded-t-xl"
-              />
+              <div className="relative"> {/* Added relative positioning */}
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-auto object-cover rounded-t-sm" // Smaller rounded corners
+                  style={{ aspectRatio: "3/4" }}
+                />
+
+              </div>
               <div className="p-4">
                 <span className="text-gray-400 uppercase text-xs">
                   {product.brand}
