@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaSearch, FaChevronDown } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
+import { IoSearchOutline } from 'react-icons/io5';
 
 const ProductSearchCard = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -66,7 +67,8 @@ const ProductSearchCard = () => {
                     onClick={() => setShowModal(true)}
                     className="py-2 rounded-md focus:outline-none  hover:text-green-500"
                 >
-                    <FaSearch className="" />
+                    <IoSearchOutline />
+
                 </button>
             </div>
 
@@ -86,7 +88,8 @@ const ProductSearchCard = () => {
                                     onChange={(e) => setSearchTerm(e.target.value)}
                                     className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 />
-                                <FaSearch className="absolute right-3 top-3 text-gray-400" />
+                                <IoSearchOutline className="absolute right-3 top-3 text-gray-400" />
+
                             </div>
                             <div className='flex items-center justify-between'>
                                 <div className="relative">
