@@ -48,7 +48,7 @@ const Navbar = () => {
               className={`absolute  left-0 top-10 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"
                 }`}
             >
-              <ul className="flex mt-2 mr-4 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
+              <ul className="flex mt-1 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
                 <li>
                   <Link to="/" className="animate-button">
                     MEN
