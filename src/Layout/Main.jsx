@@ -3,9 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Navbard from '../Pages/Shared/Navbar/Navbard';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
-import AIChat from '../Pages/Shared/Footer/AiChat';
-import TawkToChat from '../Pages/Home/Home/Tawk';
-import TawkToMessage from '../Pages/Home/Home/TawkToMessage';
+import JivoChat from '../Pages/Home/Home/JivoChat';
 
 const Main = () => {
     return (
@@ -22,7 +20,7 @@ const Main = () => {
             <div className=''>
                 <Outlet />
             </div>
-            <TawkToMessage />
+            <JivoChat />
             <Footer />
         </div>
     );
