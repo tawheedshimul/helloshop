@@ -32,10 +32,10 @@ const Navbar = () => {
             <div className="">
               <div className="flex items-center justify-between space-x-5">
                 <Link to="/" className="">
-                  <BiHome className="text-xl hover:text-green-600 duration-200" />
+                  <BiHome className="text-2xl hover:text-green-600 duration-200" />
                 </Link>
                 <Link to="/" className=" px-">
-                  <GoPeople className="text-xl hover:text-green-600 duration-200" />
+                  <GoPeople className="text-2xl hover:text-green-600 duration-200" />
                 </Link>
                 <Link to="/" className=" px-">
                   <BsWhatsapp className="text- hover:text-green-600 duration-200" />
@@ -145,20 +145,22 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center justify-between sm:hidden w-full text-xl">
+        <div className="flex items-center justify-between sm:hidden w-full">
           <Link to="/" className="">
-            <BiHome className="text-xl hover:text-green-600 duration-200" />
+            <BiHome className="text-2xl hover:text-green-600 duration-200" />
           </Link>
           <Link to="/" className=" px-">
-            <GoPeople className="text-xl hover:text-green-600 duration-200" />
+            <GoPeople className="text-2xl hover:text-green-600 duration-200" />
           </Link>
           <Link to="/" className=" px-">
             <BsWhatsapp className="text- hover:text-green-600 duration-200" />
           </Link>
-          <div className="px-">
+          <div className="text-2xl">
             <ProductSearchCard />
           </div>
+          <div className="text-xl">
           <GrLogin />
+          </div>
           {/* <Message /> */}
           <AddToCartButton />
           <button
