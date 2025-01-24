@@ -38,11 +38,11 @@ const Navbar = () => {
           <Link to="/" className="text-2xl hover:text-green-600">
             <GoPeople />
           </Link>
-          <Link to="/" className="text-2xl hover:text-green-600">
+          <Link to="/" className="text-xl hover:text-green-600">
             <BsWhatsapp />
           </Link>
           {/* Dropdown */}
-          <div className={`absolute left-0 top-10 z-50 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
+          <div className={`absolute left-0 top-10 z-50 mt-1 w-full bg-white sm:static sm:w-auto sm:flex sm:bg-transparent transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
             <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-0 text-gray-700 text-right">
               {navItems.map(({ to, label }) => (
                 <li key={label}>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
         {/* Mobile Navbar */}
         <div className={`absolute sm:hidden left-0 top-10 z-50 w-full bg-white transition-all duration-300 ${isOpen ? "block" : "hidden"}`}>
-          <ul className="flex flex-col gap-4 p-0 text-gray-700 text-right">
+          <ul className="flex flex-col gap-4 p-0 text-gray-700 text-left pl-4 my-4">
             {navItems.map(({ to, label }) => (
               <li key={label}>
                 <Link to={to} className="animate-button" onClick={handleLinkClick}>{label}</Link>
