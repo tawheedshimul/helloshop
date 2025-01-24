@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductPage = () => {
+const NewProduct = () => {
     const products = [
         {
             id: 1,
@@ -105,4 +105,4 @@ const ProductPage = () => {
     );
 };
 
-export default ProductPage;
+export default NewProduct;

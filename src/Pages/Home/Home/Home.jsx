@@ -2,6 +2,9 @@ import React from 'react';
 import NewArrival from '../NewArrival/NewArrival';
 import NewProduct from '../NewProduct/NewProduct';
 import CarouselTest from '../Carousel/CarouselTest';
+import ProductCardPage from '../../Product/ProductPage/ProductCardPage.';
+
+
 
 
 const Home = () => {
@@ -11,6 +14,7 @@ const Home = () => {
             {/* <CategoryPage /> */}
             <NewArrival />
             <NewProduct />
+            <ProductCardPage />
         </div>
     );
 };

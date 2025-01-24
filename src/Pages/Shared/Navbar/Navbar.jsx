@@ -50,7 +50,7 @@ const Navbar = () => {
             >
               <ul className="flex mt-1 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
                 <li>
-                  <Link to="/" className="animate-button">
+                  <Link to="/men" className="animate-button">
                     MEN
                   </Link>
                 </li>
@@ -119,7 +119,7 @@ const Navbar = () => {
         >
           <ul className="flex mt-2 mr-4 flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 text-right sm:p-0">
             <li>
-              <Link to="/" className="animate-button">
+              <Link to="/men" className="animate-button">
                 MEN
               </Link>
             </li>

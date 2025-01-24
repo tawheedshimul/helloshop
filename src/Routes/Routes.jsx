@@ -1,37 +1,34 @@
 import { createBrowserRouter } from "react-router-dom";
+import { ScrollRestoration } from "react-router-dom"; // Import ScrollRestoration
 import Main from "../Layout/Main";
-
-import ProductPage from "../Pages/Home/ProductCategory/ProductPage";
-import SubcategoryPage from "../Pages/Home/ProductCategory/SubcategoryPage";
-import CategoryPage from "../Pages/Home/ProductCategory/CategoryPage";
 import Home from "../Pages/Home/Home/Home";
-import CustomerCare from "../Pages/CustomerCare/CustomerCare";
-
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import ProductCardPage from "../Pages/Product/ProductPage/ProductCardPage.";
+import ProductDetailsPage from "../Pages/Shared/ProductDetailsPage/ProductDetailsPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />, // Main layout
+    errorElement: <ErrorPage />,
+    element: (
+      <>
+        <ScrollRestoration /> {/* Add this inside your layout component */}
+        <Main />
+      </>
+    ), // Main layout
     children: [
       {
         path: "/",
         element: <Home />, // Home Page
       },
       {
-        path: "/categories",
-        element: <CategoryPage />, // Categories Page
+        path: "/men",
+        element: <ProductCardPage />, // Subcategories Page
       },
       {
-        path: "/subcategory/:categoryId",
-        element: <SubcategoryPage />, // Subcategories Page
-      },
-      {
-        path: "/products/:subcategoryId",
-        element: <ProductPage />, // Products Page
-      },
-      {
-        path: "/customer-care",
-        element: <CustomerCare/>, // Products Page
+        path: "/product/:id",
+        element: <ProductDetailsPage />, // Product Details Page
+        loader: async ({ params }) => fetch(`https://dummyjson.com/products/${params.id}`).then(res => res.json()),
       },
     ],
   },
