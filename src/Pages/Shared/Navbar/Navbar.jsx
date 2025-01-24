@@ -20,6 +20,13 @@ const Navbar = () => {
     { to: "/login", label: "BUILDINGS" }
   ];
 
+  const handleLinkClick = () => {
+    // Prevent toggling of the menu when a link is clicked
+    if (isOpen) {
+      setIsOpen(false); // Close the menu if it's open
+    }
+  };
+
   return (
     <div className="bg-gray-50 bg-opacity-60 backdrop-blur-lg py-3">
       <div className="flex items-center justify-between px-4 text-xl relative">
@@ -39,7 +46,7 @@ const Navbar = () => {
             <ul className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-0 text-gray-700 text-right">
               {navItems.map(({ to, label }) => (
                 <li key={label}>
-                  <Link to={to} className="animate-button">{label}</Link>
+                  <Link to={to} className="animate-button" onClick={handleLinkClick}>{label}</Link>
                 </li>
               ))}
             </ul>
@@ -61,7 +68,7 @@ const Navbar = () => {
           <ul className="flex flex-col gap-4 p-0 text-gray-700 text-right">
             {navItems.map(({ to, label }) => (
               <li key={label}>
-                <Link to={to} className="animate-button">{label}</Link>
+                <Link to={to} className="animate-button" onClick={handleLinkClick}>{label}</Link>
               </li>
             ))}
           </ul>
@@ -70,7 +77,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between sm:hidden w-full">
           <Link to="/" className="text-2xl hover:text-green-600"><BiHome /></Link>
           <Link to="/" className="text-2xl hover:text-green-600"><GoPeople /></Link>
-          <Link to="/" className="text-2xl hover:text-green-600"><BsWhatsapp /></Link>
+          <Link to="/" className="text-xl hover:text-green-600"><BsWhatsapp /></Link>
           <ProductSearchCard />
           <GrLogin />
           <AddToCartButton />
